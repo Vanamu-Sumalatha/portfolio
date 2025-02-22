@@ -8,7 +8,7 @@ const contactRoutes = require("./routes/contactRoutes");
 const app = express();
 
 // ✅ Middleware
-app.use(cors({ origin: "https://your-frontend-url.com", credentials: true })); // Allow frontend access
+app.use(cors({ origin: "https://portfolio-frontend-3t0b.onrender.com/", credentials: true })); // Allow frontend access
 app.use(bodyParser.json());
 
 // ✅ Root Route (To check if the backend is running)
