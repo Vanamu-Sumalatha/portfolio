@@ -46,7 +46,7 @@ const Contact = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/api/contact/submit", {
+      const response = await fetch("https://portfolio-backend-09fv.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
