@@ -1,0 +1,211 @@
+/* General Styles */
+.hero {
+  height: 100vh;
+  background-color: #F0ECF9; /* Light lavender */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Navbar Enhancements */
+.navbar-brand {
+  font-size: 28px !important;
+  font-weight: bold;
+  color: #6F42C1 !important;
+  margin-left: -22px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 20px !important;
+  margin: 0 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #6F42C1 !important;
+  font-weight: bold;
+}
+
+/* Text Section */
+.text-section {
+  text-align: left;
+  color: #5d5c5c;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out, slideInLeft 1s ease-in-out;
+}
+
+.name-highlight {
+  color: #6F42C1;
+  font-weight: bold;
+}
+
+.about-text {
+  font-size: 18px;
+  max-width: 500px;
+}
+
+/* Social Icons */
+.social-icons a {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #6F42C1;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #4B2A82;
+  transform: scale(1.2);
+}
+
+/* Profile Picture */
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out, slideInRight 1s ease-in-out;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border: 7px solid #6F42C1;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px rgb(152, 146, 146);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.hire-me-btn,
+.download-cv-btn {
+  font-size: 16px;
+  padding: 12px 28px;
+  white-space: nowrap; /* Prevent text from wrapping */
+  display: inline-block;
+  text-align: center;
+  width: auto;
+}
+
+.hire-me-btn {
+  background-color: #6F42C1 !important;
+  border: 2px solid #6F42C1 !important;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.hire-me-btn:hover {
+  background-color: white !important;
+  color: #6F42C1 !important;
+}
+
+.download-cv-btn {
+  background-color: white !important;
+  border: 2px solid #6F42C1 !important;
+  color: #6F42C1 !important;
+  transition: 0.3s ease-in-out;
+}
+
+.download-cv-btn:hover {
+  background-color: #6F42C1 !important;
+  color: white !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .text-section {
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .profile-pic-container {
+    margin-top: 30px;
+  }
+
+  .profile-pic {
+    margin-left: 0;
+    width: 60%;
+    max-width: 300px;
+  }
+
+  /* Responsive Buttons */
+  .hire-me-btn,
+  .download-cv-btn {
+    font-size: 13px;
+    padding: 10px 20px;
+    width: 100%; /* Full width to avoid breaking */
+    max-width: 250px; /* Prevent excessive stretching */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .profile-pic {
+    width: 70%;
+    max-width: 250px;
+  }
+
+  /* Adjust Button Size for Small Screens */
+  .hire-me-btn,
+  .download-cv-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    max-width: 200px;
+  }
+}
+@media (min-width: 1024px) {
+  .hire-me-btn,
+  .download-cv-btn {
+    font-size: 14px; /* Reduce font size */
+    padding: 8px 20px; /* Reduce padding */
+  }
+}

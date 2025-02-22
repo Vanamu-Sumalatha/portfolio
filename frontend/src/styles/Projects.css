@@ -1,0 +1,89 @@
+.projects-section {
+  padding: 60px 10%;
+  text-align: center;
+  background-color: white;
+}
+
+.projects-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #6f42c1;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s ease-in-out;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-card .card-title {
+  font-weight: bold;
+  color:#474444;
+}
+
+.project-card .card-text {
+  color: #5d5c5c;
+}
+
+
+.project-card .btn-primary {
+  background-color: #6f42c1 !important;
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+
+.project-card .btn-primary:hover {
+  background-color: #5a2da3 !important;
+  transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(40px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.project-col {
+  margin-bottom: 30px;
+}
+
+.project-card {
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.load-more-container {
+  margin-top: 20px;
+}
+
+.load-more-btn {
+  background-color: white;
+  border-color: #6f42c1;
+  color: #6f42c1;
+  padding: 10px 20px;
+  font-size: 15px;
+  transition: background 0.3s;
+  border: 2px solid #6F42C1 !important;
+  
+}
+
+.load-more-btn:hover {
+  background-color: #5a2da3;
+
+}

@@ -1,0 +1,70 @@
+.skills-section {
+    padding: 60px 10%;
+    text-align: center;
+    background-color: #F0ECF9;
+    
+  }
+  
+  .skills-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6F42C1;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Grid Layout */
+  .skill-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  /* Progress Circle Container */
+  .progress-container {
+    width: 120px;
+    height: 120px;
+    animation: scaleUp 1s ease-in-out;
+  }
+  
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Skill Name */
+  .skill-name {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color:#5d5c5c;
+  } 
+  .more-skills-btn{
+    background-color: white !important;
+    border: 2px solid #6F42C1 !important;
+    color: #6F42C1 !important;
+    transition: 0.3s ease-in-out;
+  }
+  .more-skills-btn:hover{
+    background-color: #6F42C1 !important;
+    color: white !important;
+  }

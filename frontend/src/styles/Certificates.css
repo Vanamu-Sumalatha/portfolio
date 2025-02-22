@@ -1,0 +1,54 @@
+.certificate-container {
+  background: #F0ECF9;
+  padding: 40px 0;
+}
+
+h2 {
+  color: #6F42C1;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.certificate-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate-img {
+  width: 80%;
+  max-width: 700px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.5s ease-in-out, opacity 0.5s;
+  opacity: 0.7;
+}
+
+/* Zoom effect for active image */
+.carousel-item.active .certificate-img {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Custom styling for carousel controls (side arrows) */
+.carousel-control-prev, .carousel-control-next {
+  width: 5%;
+}
+
+/* Make the arrow icon grey */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(50%); /* Makes the arrow grey */
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  opacity: 1;
+}

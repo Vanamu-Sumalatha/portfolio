@@ -1,0 +1,54 @@
+.about-section {
+  padding: 50px 0;
+  background-color: white;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #6F42C1;
+  margin-bottom: 15px;
+}
+
+.about-description {
+  font-size: 18px;
+  color: #5d5c5c;
+  max-width: 80%;
+  margin: 0 auto 30px; /* Center the description */
+}
+
+.profile-img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 60%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px; /* Rectangle shape */
+  box-shadow: 5px 5px 2px #6f42c1; /* Shadow effect */
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+.about-info {
+  font-size: 18px;
+  color: #5d5c5c;
+}
+
+.download-btn {
+  background-color: #6F42C1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  transition: 0.3s;
+  font-size: 13px;
+}
+
+.download-btn:hover {
+  background-color: #4B2A82;
+}
