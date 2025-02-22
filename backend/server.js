@@ -7,24 +7,33 @@ const contactRoutes = require("./routes/contactRoutes");
 
 const app = express();
 
-// Middleware
-app.use(cors());
+// ✅ Middleware
+app.use(cors({ origin: "https://your-frontend-url.com", credentials: true })); // Allow frontend access
 app.use(bodyParser.json());
 
-// Root route to prevent "Cannot GET /"
+// ✅ Root Route (To check if the backend is running)
 app.get("/", (req, res) => {
-  res.send("Backend is running!");
+  res.send("✅ Backend is running successfully!");
 });
 
-// Connect to MongoDB
+// ✅ Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("✅ MongoDB connected"))
-  .catch((err) => console.error("❌ MongoDB connection error:", err));
+  .then(() => console.log("✅ MongoDB connected successfully"))
+  .catch((err) => {
+    console.error("❌ MongoDB connection error:", err);
+    process.exit(1); // Exit if connection fails
+  });
 
-// Contact form routes
+// ✅ Routes
 app.use("/api/contact", contactRoutes);
 
-// Start server
+// ✅ Global Error Handler
+app.use((err, req, res, next) => {
+  console.error("❌ Server Error:", err);
+  res.status(500).json({ error: "Internal Server Error" });
+});
+
+// ✅ Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
