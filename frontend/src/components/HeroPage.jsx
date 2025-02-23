@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Button, Row, Col } from "react-bootstrap";
-import {  FaTwitter, FaLinkedin, FaGithub, FaInstagram, FaYoutube } from "react-icons/fa";
+import {  FaTwitter, FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa";
 import "../styles/HeroPage.css";
 import profilePic from "../Images/mypic.jpg";
 import cvFile from "../Documents/N190699_resume.pdf"; // Add your CV file in the "Documents" folder
@@ -20,11 +20,10 @@ const HeroPage= () => {
             I’m a Computer Science student who loves turning ideas into reality through code. Whether it’s crafting sleek web applications or solving tough challenges, I enjoy every step of the process. Always exploring, always building <i>let’s create something incredible!</i>
             </p>
             <div className="social-icons d-flex justify-content-center justify-content-md-start">
-              <a href="https://www.youtube.com/@sumalatha_reddy" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+              <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter /></a>
               <a href="https://www.linkedin.com/in/vanamu-sumalatha-38aba2227/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
               <a href="https://github.com/Vanamu-Sumalatha" target="_blank" rel="noopener noreferrer"><FaGithub /></a>
-              <a href="https://www.instagram.com/suma_lovely213/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
             </div>
             <div className="mt-3 d-flex justify-content-center justify-content-md-start">
   <Button className="hire-me-btn me-2">Hire Me</Button>
