@@ -46,7 +46,7 @@ const Contact = () => {
     setError("");
 
     try {
-      const response = await fetch("https://portfolio-backend-09fv.onrender.com/api/contact/submit", { // ✅ Corrected API endpoint
+      const response = await fetch("https://portfolio-backend-09fv.onrender.com/submit", { // ✅ Corrected API endpoint
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
