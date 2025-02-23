@@ -2,23 +2,34 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const bodyParser = require("body-parser");
 const contactRoutes = require("./routes/contactRoutes");
 
 const app = express();
 
-// ✅ Middleware
-app.use(cors({ origin: "https://portfolio-frontend-3t0b.onrender.com", credentials: true }));
-app.use(bodyParser.json());
+// ✅ CORS Configuration (Supports Multiple Origins for Development & Production)
+const allowedOrigins = ["https://portfolio-frontend-3t0b.onrender.com", "http://localhost:3000"];
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
+}));
 
-// ✅ Root Route (To check if the backend is running)
+// ✅ Built-in Middleware (Replaces bodyParser)
+app.use(express.json());
+
+// ✅ Root Route (Check if Backend is Running)
 app.get("/", (req, res) => {
   res.send("✅ Backend is running successfully!");
 });
 
-// ✅ Connect to MongoDB
+// ✅ Connect to MongoDB with Proper Error Handling
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("✅ MongoDB connected successfully"))
   .catch((err) => {
     console.error("❌ MongoDB connection error:", err);
@@ -30,10 +41,11 @@ app.use("/api/contact", contactRoutes);
 
 // ✅ Global Error Handler
 app.use((err, req, res, next) => {
-  console.error("❌ Server Error:", err);
-  res.status(500).json({ error: "Internal Server Error" });
+  console.error("❌ Server Error:", err.message || err);
+  res.status(err.status || 500).json({ error: err.message || "Internal Server Error" });
 });
 
 // ✅ Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
