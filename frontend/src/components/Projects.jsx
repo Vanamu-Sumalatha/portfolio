@@ -17,33 +17,33 @@ const allProjects = [
     description:
       "An online loan management system that allows users to apply for loans, check eligibility, track application status, and manage repayments.",
     image: require("../Images/loan.png"),
-    github: "https://github.com/Vanamu-Sumalatha",
+    github: "https://github.com/Vanamu-Sumalatha?tab=repositories",
   },
   {
     title: "Flora Cart",
     description:
       "An online floral e-commerce platform offering beautiful bouquets for all occasions with secure payment and real-time order tracking.",
     image: require("../Images/flower.png"),
-    github: "https://github.com/Vanamu-Sumalatha",
+    github: "https://github.com/Vanamu-Sumalatha?tab=repositories",
   },
   {
     title: "Sentiment Analysis",
     description:
 "Sentiment analysis tool that identifies emotions in text, categorizing them as positive, negative, or neutral for insights into user opinions and trends.", 
 image: require("../Images/sentiment-analysis.jpg"),
-    github: "https://github.com/Vanamu-Sumalatha",
+    github: "https://github.com/Vanamu-Sumalatha?tab=repositories",
   },
   {
     title: "Heart Disease Prediction",
     description:
 "Heart disease prediction system that analyzes health data using machine learning to assess risk levels and provide early warning for preventive care.",    image: require("../Images/heart.png"),
-    github: "https://github.com/Vanamu-Sumalatha",
+    github: "https://github.com/Vanamu-Sumalatha?tab=repositories",
   },
   {
     title: "Portfolio Website",
     description:
 "Personal portfolio website showcasing skills, projects, and experience with a responsive design for easy navigation and professional presentation.",    image: require("../Images/portfolio.jpg"),
-    github: "https://github.com/Vanamu-Sumalatha",
+    github: "https://github.com/Vanamu-Sumalatha?tab=repositories",
   },
 ];
 
