@@ -10,7 +10,7 @@ const allProjects = [
     description:
       "A social platform designed for students to connect based on academic interests, collaborate on projects, and share learning resources.",
     image: require("../Images/connectify.png"),
-    github: "https://github.com/Vanamu-Sumalatha",
+    github: "https://github.com/Vanamu-Sumalatha?tab=repositories",
   },
   {
     title: "Loan Application",
