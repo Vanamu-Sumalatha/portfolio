@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log("✅ MongoDB connected"))
 .catch((err) => console.error("❌ MongoDB connection error:", err));
 
-app.use("https://portfolio-frontend-3t0b.onrender.com/api/contact", contactRoutes);
+app.use("https://portfolio-frontend-3t0b.onrender.com/api/contact/submit", contactRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
